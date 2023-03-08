@@ -29,6 +29,9 @@ strong {
 body {
   font-family: FuturaPT;
 }
+
+
+
 .apply {
   position: relative;
   background-image: url("https://static.tildacdn.com/tild3861-6133-4666-b166-643430343963/Untitled-1-02-1.svg");
@@ -75,8 +78,9 @@ body {
 }
 
 .pp {
-  padding: 50px 12vw;
+  padding: 50px 12vw !important;
 }
+
 /* about */
 .about {
   display: grid;
@@ -89,7 +93,7 @@ body {
 }
 
 .about > ul {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   font-family: FuturaPTL;
 }
@@ -97,26 +101,30 @@ body {
   font-family: FuturaPT;
 }
 .about > p {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.9;
   font-family: FuturaPTL;
 }
 .about > img {
   width: 100%;
-  max-height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 800px) {
   .about {
+    grid-template-columns: repeat(2, 1fr);
+
   }
-  .about > ul {
-    font-size: 18px;
+  
+}
+@media only screen and (min-width: 1000px) {
+  .about > ul ,  .about > p{
     line-height: 1.5;
   }
-  .about > p {
-    font-size: 19px;
-    line-height: 1.5;
-  }
+ 
 }
 
 .bullet {
@@ -204,7 +212,7 @@ body {
 .teacher_main {
   display: grid;
   grid-template-columns: repeat(2, 38vw);
-  grid-gap: 20px;
+  grid-gap: 40px;
   color: white;
   justify-content: center;
   align-items: center;
@@ -244,4 +252,43 @@ body {
   .teacher_main {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* teacher_main end */
+
+/* assistants_main */
+.assistants_main {
+  margin-top: 90px;
+  text-align: left;
+  line-height: 1.4;
+}
+.assistants_main > h1 {
+  margin-bottom: 40px;
+}
+.assistants_main > ul {
+  line-height: 1.9;
+}
+
+.assistants_main > ul > li {
+  font-size: 13px;
+  font-family: FuturaPTL;
+  font-weight: 400 !important;
+  margin-left: 30px;
+}
+
+/* partners */
+.partners {
+  display: grid;
+  grid-template-columns: repeat(4, 17vw);
+  grid-gap: 13px;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin-top: 30px;
+  padding-left: 20px;
+}
+
+.partners_item > img {
+  width: 100%;
+  object-fit: contain;
 }
