@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: FuturaPT;
+  src: url(./futura/futura-medium.ttf);
+}
+@font-face {
+  font-family: FuturaPTL;
+  src: url(./futura/futura-light-bt.ttf);
+}
+@font-face {
+  font-family: FuturaPTB;
+  src: url(./futura/Futura-Book-font.ttf);
+}
+p {
+  font-family: FuturaPTL;
+}
+strong {
+  font-family: FuturaPT;
+}
+.mt {
+  margin-top: 20px;
+}
+
+body {
+  font-family: FuturaPT;
+}
+.apply {
+  position: relative;
+  background-image: url("https://static.tildacdn.com/tild3861-6133-4666-b166-643430343963/Untitled-1-02-1.svg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh !important;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.apply_text {
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+}
+.apply_text h1 {
+  font-size: 47px;
+  font-weight: 500 !important;
+}
+
+.apply_text p {
+  font-size: 17px;
+  font-family: FuturaPTL;
+}
+.apply_button {
+  margin-top: 80px;
+}
+
+.btn {
+  padding: 15px 50px;
+  color: whitesmoke;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+}
+.btn-red {
+  background-color: rgb(236, 28, 37);
+}
+.btn-trans {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.pp {
+  padding: 50px 12vw;
+}
+/* about */
+.about {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(247, 247, 250);
+  grid-gap: 40px;
+}
+
+.about > ul {
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: FuturaPTL;
+}
+.about > ul > li {
+  font-family: FuturaPT;
+}
+.about > p {
+  font-size: 18px;
+  line-height: 1.9;
+  font-family: FuturaPTL;
+}
+.about > img {
+  width: 100%;
+  max-height: auto;
+}
+
+@media only screen and (min-width: 1000px) {
+  .about {
+  }
+  .about > ul {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .about > p {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+}
+
+.bullet {
+  list-style: bullet;
+}
+
+.about_text {
+  line-height: 1.6;
+}
+.about_img {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  position: relative;
+  grid-gap: 10px;
+}
+.about_img > div {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-color: red;
+}
+.about_img1 {
+  background-image: url("./images/robot.jpeg");
+}
+.about_img2 {
+  background-image: url("./images/drone.png");
+}
+.about_img3 {
+  background-image: url("./images/light.png");
+  grid-column: span 2;
+}
+
+@media only screen and (max-width: 700px) {
+  .about_img > div {
+    height: 300px;
+  }
+  .button_res {
+    width: 100% !important;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .about_img > div {
+    max-height: 500px;
+  }
+  .about_img1 {
+    background-image: url("./images/robot.jpeg");
+    height: 300px !important;
+  }
+  .about_img2 {
+    background-image: url("./images/drone.png");
+    height: 200px;
+    position: relative;
+    bottom: -40px;
+  }
+  .about_img3 {
+    background-image: url("./images/light.png");
+    grid-column: span 2;
+    width: 70% !important;
+    position: absolute;
+    bottom: 0;
+    transform: translate(20%, -130px);
+    height: 200px;
+  }
+}
+
+/* about end */
+
+.schedule_item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 0;
+  border: solid #22282e;
+  border-width: 1px 0 0 0;
+  font-size: 17px;
+}
+
+.schedule_item_text {
+  margin-left: 20px;
+}
+
+/* teacher_main */
+.teacher_main {
+  display: grid;
+  grid-template-columns: repeat(2, 38vw);
+  grid-gap: 20px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+
+.teacher_main_img > img {
+  width: 100%;
+  object-fit: contain;
+}
+.teacher_main_img_text {
+  margin-top: 15px;
+}
+.teacher_main_img_text > h4 {
+  position: relative;
+  width: fit-content;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+}
+.teacher_main_img_text > h4::after {
+  content: "";
+  border-bottom: 2px solid white;
+  position: absolute;
+  width: 100%;
+
+  bottom: 0;
+  left: 0;
+}
+.teacher_main_img_text > p {
+  font-family: FuturaPTL !important;
+  font-weight: 300;
+  font-size: 11px;
+}
+
+@media only screen and (min-width: 800px) {
+  .teacher_main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
